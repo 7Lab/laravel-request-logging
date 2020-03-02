@@ -1,0 +1,47 @@
+{
+    "name": "7lab/laravel-request-logging",
+    "description": "Write all incoming requests and there responses",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arjan Kempes",
+            "email": "arjan@kempes.nu"
+        }
+    ],
+    "homepage": "https://github.com/7lab/laravel-request-logging",
+    "keywords": ["Laravel", "request", "logging"],
+    "require": {
+        "laravel/framework": "~5|~6",
+        "illuminate/support": "~5|~6"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3",
+        "orchestra/testbench": "~3.8.8|^4.0",
+        "phpunit/phpunit": "^8.3",
+        "sempro/phpunit-pretty-print": "^1.0",
+        "timacdonald/log-fake": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "SevenLab\\RequestLogging\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SevenLab\\RequestLogging\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SevenLab\\RequestLogging\\RequestLoggingServiceProvider"
+            ]
+        }
+    }
+}
